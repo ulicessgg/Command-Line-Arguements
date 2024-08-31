@@ -12,9 +12,12 @@
 * index value based off their position in the arguement string
 *
 **************************************************************/
-
 #include <stdio.h>
 
+// argc and argv were used as they allow input from the command line to be
+// read into main through the use of the argv character pointer array which
+// can then be output through a loop using integer argc which holds the value
+// of the number of command line arguements which is the size of argv
 int main(int argc, char* argv[])
 {
     if(argc > 1)
