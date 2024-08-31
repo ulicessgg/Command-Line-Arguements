@@ -15,9 +15,22 @@
 
 #include <stdio.h>
 
-int main(void)
+int main(int argc, char* argv[])
 {
-    printf("Hello World\n");
+    if(argc > 1)
+    {
+        printf("correct number of arguments have been read\n");
+        printf("There were %d arguemtns on the command line\n", argc);
+    }
+    if(argv != NULL)
+    {
+        printf("command line arguements have been read\n");
+
+        for(int i = 0; i < argc; i++)
+        {
+            printf("%s\n", argv[i]);
+        }
+    }
 
     return 0;
 }
