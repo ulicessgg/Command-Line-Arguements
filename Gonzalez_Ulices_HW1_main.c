@@ -8,27 +8,26 @@
 * File:: Gonzalez_Ulices_HW1_main.c
 *
 * Description:: This file handles the fetching of command line
-* arguements and displays them to the user with their correct
-* index value based off their position in the arguement string.
+* arguments and displays them to the user with their correct
+* index value based on their position in the command line.
 *
 **************************************************************/
 #include <stdio.h>
 
-// argc and argv were used as they allow input from the command line to 
-// be read into main through the use of the argv character pointer array 
-// which can then be output through a loop using argc which holds the value
-// of the number of command line arguements which is the size of argv.
+// main an integer argc which holds the number of command line arguments 
+// and the argv character pointer array which holds each argument entered
 int main(int argc, char* argv[])
 {
+    // To match the example output a newline was inserted before the text
     printf("\nThere were %d arguments on the command line.\n", argc);
 
+    // for loop iterates though the argv array and outputs values 
+    // found in each index, argc is used as the limit for the loop 
     for(int i = 0; i < argc; i++)
     {
-        // Due to the example output showing the index of the arguments
-        // containing two digits I formatted the index with 02 so it will
-        // have a leading 0 if the index is a single digit and the 2 to
-        // specify there to be a minimum character width of 2 characters
-        printf("Argument %02d:    %s\n", i, argv[i]);
+        // 02 was used to print numbers with a leading 0 if the index is a 
+        // single digit and for all numbers to have a minimum width of 2
+        printf("Argument %02d: \t%s\n", i, argv[i]);
     }
 
     return 0;
