@@ -20,7 +20,7 @@
 // of the number of command line arguements which is the size of argv.
 int main(int argc, char* argv[])
 {
-    printf("There were %d arguements on the command line\n", argc);
+    printf("\nThere were %d arguments on the command line.\n", argc);
 
     for(int i = 0; i < argc; i++)
     {
@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
         // containing two digits I formatted the index with 02 so it will
         // have a leading 0 if the index is a single digit and the 2 to
         // specify there to be a minimum character width of 2 characters
-        printf("Arguement %02d ::   %s\n", i, argv[i]);
+        printf("Argument %02d:    %s\n", i, argv[i]);
     }
 
     return 0;
